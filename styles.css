@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Impede que o conteúdo saia da tela na horizontal */
+    animation: fadeIn 1s ease-in; /* Animação ao abrir a tela */
+}
+
+header {
+    background: #7C2487; /* Roxo PMS 2665 */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    animation: slideDown 1s ease-in-out; /* Animação ao abrir a tela */
+}
+
+header h1 { 
+    font-family: 'Roboto', sans-serif; 
+    font-size: 2.5rem; 
+    margin: 0; 
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+nav ul li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #49217A; /* Cor de destaque */
+    transition: width 0.3s ease;
+    z-index: 0;
+}
+
+nav ul li:hover::before {
+    width: 100%;
+}
+
+main {
+    max-width: 1200px; /* Limita a largura máxima do conteúdo principal */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+section {
+    padding: 2rem 1rem;
+    text-align: center; /* Centraliza o texto nos campos */
+    animation: fadeIn 1.5s ease-in-out; /* Animação ao abrir a tela */
+}
+
+.project-card,
+#sobre {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    margin: 1rem auto; /* Centraliza os cards de projeto */
+    padding: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s; /* Animação de transformação e sombra */
+    max-width: 80%; /* Limita a largura máxima dos cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Bordas arredondadas para um visual mais moderno */
+}
+
+.project-card a,
+#sobre a {
+    text-decoration: none;
+    color: #7C2487; /* Roxo PMS 2665 */
+    font-weight: bold;
+}
+
+.project-card:hover,
+#sobre:hover {
+    transform: translateY(-10px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais profunda ao passar o mouse */
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Ajusta a imagem para cobrir completamente o elemento sem distorção */
+    background: rgba(255, 255, 255, 0.9); /* Fundo branco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 10px; /* Espaçamento interno */
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+footer {
+    background: #7C2487; /* Roxo PMS 2665 */
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    animation: fadeIn 1s ease-in; /* Animação ao abrir a tela */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+/* Fundo animado */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #7C2487, #49217A);
+    background-size: 400% 400%;
+    z-index: -1;
+    animation: gradientShift 15s ease infinite;
+    opacity: 0.5;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.contacts-list { 
+    list-style-type: none; 
+    padding: 0; 
+    text-align: center;
+    color: #fff;
+}
+
+
